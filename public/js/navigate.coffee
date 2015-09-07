@@ -14,6 +14,15 @@ showSteps = ->
   while step > 0
     step -= 1
     $(current_slide.steps[step]).addClass('active')
+  customEvents()
+
+customEvents = ->
+  current_slide = window.slides[window.current]
+  step = current_slide.steps[current_slide.current_step]
+  if step
+    method_name = step.getAttribute('event')
+    if method_name && window[method_name]
+      window[method_name]()
 
 nextSlide = ->
   window.current += 1 unless window.slides.length - 1 == window.current
