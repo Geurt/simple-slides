@@ -1,0 +1,24 @@
+/*The styling that makes it all work. Aesthetics go in /slides/slides.sass.*/
+
+/*This is the only way Chrome doesn't fuck up fullscreen background.*/
+*
+  background-color: white
+
+body
+  &:-webkit-full-screen, &:fullscreen
+    position: fixed
+    width: 100%
+    top: 0
+
+slide
+  display: none
+
+  &.active
+    display: block
+
+.step
+  display: none
+
+  &.active
+    display: block
+/*note this overrides 'display: list item' for li*/

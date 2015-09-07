@@ -7,7 +7,6 @@ showSlide = ->
   $('slide').removeClass('active')
   $(current_slide).addClass('active')
 
-
 showSteps = ->
   current_slide = window.slides[window.current]
   step = current_slide.current_step

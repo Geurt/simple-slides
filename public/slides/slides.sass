@@ -1,9 +1,5 @@
 $black: #000
-$white: rgba(255,255,255,1)
-
-/*This is the only way Chrome doesn't fuck up fullscreen background.*/
-*
-  background-color: $white
+$white: #fff
 
 body
   font-family: "Courier New", Courier, monospace, "Avenir Next", "Avenir", "Futura", "Verdana", "Roboto", sans-serif
@@ -13,11 +9,6 @@ body
   font-size: 3em
   line-height: 1
   text-align: center
-
-  &:-webkit-full-screen, &:fullscreen
-    position: fixed
-    width: 100%
-    top: 0
 
 header
   text-align: left
@@ -30,20 +21,9 @@ slides
   height: 100%
 
 slide
-  display: none
   height: 100%
   padding: 3em
   font-weight: bold
-
-  &.active
-    display: block
-
-.step
-  display: none
-
-  &.active
-    display: block
-/*note this overrides 'display: list item' for li*/
 
 ul
   list-style-type: none
